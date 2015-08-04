@@ -1,0 +1,210 @@
+
+@font-face {
+    font-family: Typo-comica;
+    src: url('../fonts/Typo_Comica.otf');
+}
+
+@font-face {
+    font-family: Typo-comica-light;
+    src: url('../fonts/Typo_Comica_light.otf');
+}
+
+/* Landing page styles */
+    html,body, .container-fluid
+    {
+        min-width: 480px;
+        min-height: 290px;
+        height: 100%;
+        text-align: center;
+        color: white;       
+    }
+    h1
+    {
+        font-family: Typo-comica;
+        letter-spacing: 10px;
+        text-shadow: 0px 2px 3px rgba(255,255,255, 0.3); 
+    }
+    #main-title a
+    {
+        text-decoration: none;
+        color: inherit;
+    }
+    .container-fluid
+    {
+        background: url('../img/back.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .select-wrap
+    {
+        padding: 5px;
+        width: 70%;
+        margin: auto;
+    }
+    .filter-option
+    {
+        text-align: center !important;
+    }
+    .btn-start
+    {
+        width: 51%;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 15px 0px;
+        margin-bottom: 5px;
+    }
+/* End of landing page styles */
+
+/* Records page styles */
+    #records-table
+    {
+        margin-top: 20px;
+    }
+
+    #records-table th
+    {
+        text-align: center;
+        font-size: 15px;
+    }
+
+/* Game page styles */
+    #status a
+    {
+        width: 30%;
+        display: block;
+        margin: 10px auto;
+        font-size: 12px;
+        font-weight: bold;
+
+    }
+    .letter 
+    {
+        font-family: Typo-comica-light;
+        margin: 4px;
+        font-size: 35px;  
+        background: none;
+        border: none;
+    }
+    .letter:hover
+    {
+        color: red;
+    }
+    .btn-meniu 
+    {
+        width: 51%;
+        margin-top: 5px;
+    }
+/* End of game page styles */
+
+
+/* Increase gap between letters for a wide screens */
+    @media (min-width: 650px) {
+        #blank 
+        {
+            letter-spacing: 25px;
+        }
+    }
+/* end */
+
+
+/* Add extra margin for a secret word and progress bar */
+    @media (min-height: 600px) {
+        #blank 
+        {
+            margin: 70px 0px 40px 0px;
+        }
+        .progress 
+        {
+            margin: 40px 0px;
+        }
+    }
+/* end */
+
+/* Decrease parameters for a smaller devices */
+    @media (max-height: 600px) {
+        #category 
+        {
+            margin-top: 5px;
+        }
+        #points 
+        {
+            margin-top: 5px;
+        }
+        #blank 
+        {
+            margin: 15px 0px;
+            letter-spacing: 10px;
+        }
+        #status a
+        {
+            margin: 5px auto;
+        }
+        .progress 
+        {
+            margin-bottom: 15px;
+        }
+        .letter 
+        {
+            margin: 2px;
+            font-size: 27px;
+        }
+        .btn-start
+        {
+            width: 40%;
+            display: block;
+            padding: 8px 0px;
+            margin: 5px auto;
+            font-size: 12px;
+        }
+    }
+/* end */
+
+
+/* Increase parameters for a larger devices */
+    @media (min-width: 1590px) {
+        #category 
+        {
+            font-size: 36px;
+            margin: 40px;
+        }
+        #points 
+        {
+            font-size: 25px;
+            margin: 40px;
+        }
+        #blank 
+        {
+            margin: 90px 0px;
+            letter-spacing: 20px;
+        }
+        #status a
+        {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px 0px;
+            font-size: 22px;
+        }
+        .progress 
+        {
+            margin: 30px;
+        }
+        .letter 
+        {
+            margin: 8px;
+            font-size: 50px; 
+        }
+    }
+/* end */
+
+/* Set float left for all letter buttons, for a small screens*/
+    @media (max-height: 600px) and (max-width: 800px) {
+        
+        .letter{
+            float: left;
+        }
+
+    }
+/* end */
