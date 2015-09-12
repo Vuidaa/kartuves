@@ -39,6 +39,11 @@ class GameController extends Controller
     //start new game session
     else
     {
+      if(empty(session('cat_id')))
+      {
+        return redirect('/');
+      }
+
       $category = Category::findOrFail(session('cat_id'));
 
       $category->load('words');
